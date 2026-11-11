@@ -13,6 +13,7 @@ targets:
         INFOPLIST_FILE: ""
         GENERATE_INFOPLIST_FILE: YES
         PRODUCT_BUNDLE_IDENTIFIER: com.yourname.clipboardkb
+        ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES: YES
     dependencies:
       - target: ClipboardKB
         embed: true
@@ -24,3 +25,4 @@ targets:
       base:
         INFOPLIST_FILE: KeyboardExtension/Info.plist
         PRODUCT_BUNDLE_IDENTIFIER: com.yourname.clipboardkb.keyboard
+        ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES: YES
