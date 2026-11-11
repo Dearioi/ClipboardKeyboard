@@ -1,30 +1,25 @@
 name: ClipboardKeyboard
-
 options:
   bundleIdPrefix: com.yourname
   deploymentTarget:
     iOS: "16.0"
-
 targets:
   ClipboardKeyboard:
     type: application
     platform: iOS
-    sources:
-      - ClipboardKeyboard
+    sources: [ClipboardKeyboard]
     settings:
       base:
+        INFOPLIST_FILE: ""
         GENERATE_INFOPLIST_FILE: YES
         PRODUCT_BUNDLE_IDENTIFIER: com.yourname.clipboardkb
-
   ClipboardKB:
     type: app-extension
     platform: iOS
-    sources:
-      - KeyboardExtension
+    sources: [KeyboardExtension]
     settings:
       base:
         INFOPLIST_FILE: KeyboardExtension/Info.plist
-        GENERATE_INFOPLIST_FILE: YES
         PRODUCT_BUNDLE_IDENTIFIER: com.yourname.clipboardkb.keyboard
     dependencies:
       - target: ClipboardKeyboard
